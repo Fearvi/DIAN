@@ -148,3 +148,47 @@ OpenClaw generó también un catálogo masivo de CVEs por despliegue sin hardeni
 
 *DIAN CHANGELOG — Cada línea es historia. Cada commit es evidencia.*
 *Every line is history. Every commit is evidence.*
+
+---
+
+## [0.1.2] - 2026-02-25
+
+### 🔬 Hito experimental — Primera inferencia DIAN con cadena de atribución verificable
+
+**Evento:** Primera comunicación real entre nodos DIAN con protocolo de atribución funcionando en hardware físico.
+
+**Condiciones del experimento:**
+- Nodo 1: MacBook Pro 2019 Intel i7, 16GB RAM, SSD externo OllamaModels
+- Modelo: mistral:7b via Ollama
+- Script: dian_nodos.py v0.1
+- Red: WiFi local, IP 172.16.33.136:8765
+
+**Cadena de atribución verificada:**
+```
+Prompt:       "¿Qué es DIAN?"
+Hash aporte:  5ec6f5c3ac94af36...  ← generado ANTES de la inferencia
+Hash output:  d0855bffab2ee20b...  ← vinculado al aporte
+Tiempo:       139.17s
+Precedencia:  verificada ✅
+```
+
+**Lo que esto prueba:**
+1. El hash del aporte humano existe antes de la inferencia — fundamento legal de autoría
+2. La solicitud viaja por red local entre nodos sin datos externos
+3. La inferencia ocurre localmente — soberanía del nodo verificada
+4. La cadena hash es inmutable y verificable por terceros
+
+**Contexto adicional:**
+- MER v0.2 integrado con embeddings reales via nomic-embed-text
+- Nodo 3 (Redmi 14C) operativo con LFM2.5-1.2B-Thinking-Q4_K via PocketPal
+- Red DIAN física: 2 nodos activos, 1 nodo móvil configurado
+
+**Autor del experimento:** Federico Araya Villalta
+**Ubicación:** San José, Costa Rica
+**Nota histórica:** Primer experimento de red distribuida DIAN ejecutado con
+hardware de consumo, sin presupuesto institucional, demostrando que la
+arquitectura es viable desde día 0 con recursos mínimos.
+
+---
+
+## Roadmap de versiones / Version Roadmap
